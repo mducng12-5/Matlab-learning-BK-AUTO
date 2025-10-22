@@ -12,13 +12,13 @@ B = A(1:2, 1:3)
 
 % lấy tất cả phần tử chẵn
 % Cách 1
-% i = 1;
-% while (i<17)
-%     if(mod(A(i), 2) == 0)
-%         fprintf('%d ', A(i))
-%     end
-%     i = i+1;
-% end
+ i = 1;
+ while (i<17)
+     if(mod(A(i), 2) == 0)
+         fprintf('%d ', A(i))
+     end
+     i = i+1;
+ end
 
 % Cách 2
 even = A(mod(A,2)==0)
