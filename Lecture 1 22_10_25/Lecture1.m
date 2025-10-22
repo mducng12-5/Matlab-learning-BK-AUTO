@@ -14,8 +14,12 @@
 %     fprintf('no result\n')
 % end
 
-name = input('user name: ', 's');
-fprintf("Name of user: %s\n", name);
+% name = input('user name: ', 's');
+% fprintf("Name of user: %s\n", name);
+A = [1 2 3; 4 5 6; 7 8 9];
+f = 1:4;
+H = A(1:3,:);
+fprintf("%d ", H);
 
 
 
