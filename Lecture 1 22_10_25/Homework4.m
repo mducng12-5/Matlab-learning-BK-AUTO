@@ -59,18 +59,36 @@ prod_row3
 num_rows = size(A,1);
 num_cols = size(A,2);
 
-C = zeros(num_cols,num_rows);
+transpose_matrix = zeros(num_cols,num_rows);
 
 for a = 1:size(A,1)
         for b = 1 : size(A,2)
-            C(b,a) = A(a,b);
+            transpose_matrix(b,a) = A(a,b);
         end
 end
  
-C
+transpose_matrix
 
 % Sắp xếp toàn bộ phần tự theo thứ tự tăng dần
+new_mat_dim = size(1, num_rows*num_cols);
+new_mat = zeros(1, new_mat_dim);
 
+for z = 1 : num_cols*num_rows
+    new_mat(z) = A(z);
+end
+new_mat
+
+for z = 1 : (num_cols*num_rows-1)
+    for k = 1 : (num_cols*num_rows-1)
+        if new_mat(k) > new_mat(k+1)
+            temp = new_mat(k);
+            new_mat(k) = new_mat(k+1);
+            new_mat(k+1) = temp;
+        end
+    end
+end
+
+new_mat
 
 
     
