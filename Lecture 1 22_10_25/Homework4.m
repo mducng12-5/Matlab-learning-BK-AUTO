@@ -1,5 +1,5 @@
-% A = input("insert your matrix: ")
-A = [ 1 4 6; 7 8 1; 35 23 10; 4 9 3]
+A = input("insert your matrix: ")
+
 % Tổng từng cột
 sum_col1 = 0;
 sum_col2 = 0;
@@ -76,7 +76,7 @@ new_mat = zeros(1, new_mat_dim);
 for z = 1 : num_cols*num_rows
     new_mat(z) = A(z);
 end
-new_mat
+new_mat;
 
 for z = 1 : (num_cols*num_rows-1)
     for k = 1 : (num_cols*num_rows-1)
@@ -89,6 +89,57 @@ for z = 1 : (num_cols*num_rows-1)
 end
 
 new_mat
+
+% Kết quả HW 4
+% 
+% A =
+% 
+%      1     4     6
+%      7     8     1
+%     35    23    10
+%      4     9     3
+% 
+% 
+% sum_col1 =
+% 
+%     47
+% 
+% 
+% sum_col2 =
+% 
+%     35
+% 
+% 
+% sum_col3 =
+% 
+%     17
+% 
+% 
+% prod_row1 =
+% 
+%     24
+% 
+% 
+% prod_row2 =
+% 
+%     56
+% 
+% 
+% prod_row3 =
+% 
+%       869400
+% 
+% 
+% transpose_matrix =
+% 
+%      1     7    35     4
+%      4     8    23     9
+%      6     1    10     3
+% 
+% 
+% new_mat =
+% 
+%      1     1     3     4     4     6     7     8     9    10    23    35
 
 
     
