@@ -1,50 +1,53 @@
 A = input("insert your matrix: ")
 
 % Tổng từng cột
-sum_col1 = 0;
-sum_col2 = 0;
-sum_col3 = 0;
+sum_col = 0;
+
+result_col = 0;
 
 for i = 1: size(A, 2)
     if i == 1
         for j = 1:size(A,1)
-            sum_col1 = sum_col1 + A(j,i);
+            sum_col = sum_col1 + A(j,i);
         end
+        result_col = sum_col
+        sum_col = 0;
     elseif i==2
            for j = 1:size(A,1)
-            sum_col2 = sum_col2 + A(j,i);
+            sum_col = sum_col2 + A(j,i);
            end 
+           result_col = sum_col
+           sum_col = 0;
     else 
         for j = 1:size(A,1)
-            sum_col3 = sum_col3 + A(j,i);
+            sum_col = sum_col3 + A(j,i);
         end
+        result_col = sum_col
+        sum_col = 0;
     end
    
 end
 
-sum_col1 
-sum_col2 
-sum_col3 
 
 % Tích từng hàng
-prod_row1 = 1;
-prod_row2 = 1;
-prod_row3 = 1;
+prod_row = 1;
+result_rows = 0;
+
 
 for i = 1: size(A,1)
     if i == 1
         for j = 1 : size(A,2)
-            prod_row1 = prod_row1 * A(i,j);
+            prod_row = prod_row1 * A(i,j);
             
         end
     elseif i == 2
         for j = 1 : size(A,2)
-            prod_row2 = prod_row2 * A(i,j);
+            prod_row = prod_row2 * A(i,j);
             
         end
     else 
         for j = 1 : size(A,2)
-            prod_row3 = prod_row3 * A(i,j);
+            prod_row = prod_row3 * A(i,j);
             
         end
     end
