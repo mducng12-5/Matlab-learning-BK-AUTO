@@ -6,25 +6,12 @@ sum_col = 0;
 result_col = 0;
 
 for i = 1: size(A, 2)
-    if i == 1
-        for j = 1:size(A,1)
-            sum_col = sum_col1 + A(j,i);
-        end
-        result_col = sum_col
-        sum_col = 0;
-    elseif i==2
-           for j = 1:size(A,1)
-            sum_col = sum_col2 + A(j,i);
-           end 
-           result_col = sum_col
-           sum_col = 0;
-    else 
-        for j = 1:size(A,1)
-            sum_col = sum_col3 + A(j,i);
-        end
-        result_col = sum_col
-        sum_col = 0;
+    for j = 1:size(A,1)
+            sum_col = sum_col + A(j,i);
     end
+    result_col = sum_col
+    sum_col = 0;
+    
    
 end
 
@@ -35,28 +22,13 @@ result_rows = 0;
 
 
 for i = 1: size(A,1)
-    if i == 1
-        for j = 1 : size(A,2)
-            prod_row = prod_row1 * A(i,j);
+    for j = 1 : size(A,2)
+            prod_row = prod_row * A(i,j);
             
-        end
-    elseif i == 2
-        for j = 1 : size(A,2)
-            prod_row = prod_row2 * A(i,j);
-            
-        end
-    else 
-        for j = 1 : size(A,2)
-            prod_row = prod_row3 * A(i,j);
-            
-        end
     end
+        result_rows = prod_row
+        prod_row = 1;
 end
-
-prod_row1 
-prod_row2 
-prod_row3 
-
 % Ma trận chuyển vị
 
 num_rows = size(A,1);
@@ -94,56 +66,46 @@ end
 new_mat
 
 % Kết quả HW 4
+% insert your matrix: [ 3 1 2; 4 6 5]
 % 
 % A =
 % 
-%      1     4     6
-%      7     8     1
-%     35    23    10
-%      4     9     3
+%      3     1     2
+%      4     6     5
 % 
 % 
-% sum_col1 =
+% result_col =
 % 
-%     47
-% 
-% 
-% sum_col2 =
-% 
-%     35
+%      7
 % 
 % 
-% sum_col3 =
+% result_col =
 % 
-%     17
-% 
-% 
-% prod_row1 =
-% 
-%     24
+%      7
 % 
 % 
-% prod_row2 =
+% result_col =
 % 
-%     56
+%      7
 % 
 % 
-% prod_row3 =
+% result_rows =
 % 
-%       869400
+%      6
+% 
+% 
+% result_rows =
+% 
+%    120
 % 
 % 
 % transpose_matrix =
 % 
-%      1     7    35     4
-%      4     8    23     9
-%      6     1    10     3
+%      3     4
+%      1     6
+%      2     5
 % 
 % 
 % new_mat =
 % 
-%      1     1     3     4     4     6     7     8     9    10    23    35
-
-
-    
-    
+%      1     2     3     4     5     6
