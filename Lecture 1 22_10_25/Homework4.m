@@ -11,11 +11,11 @@ for i = 1: size(A, 2)
             sum_col1 = sum_col1 + A(j,i);
         end
     elseif i==2
-           for j = 1:3
+           for j = 1:size(A,1)
             sum_col2 = sum_col2 + A(j,i);
            end 
     else 
-        for j = 1:3
+        for j = 1:size(A,1)
             sum_col3 = sum_col3 + A(j,i);
         end
     end
