@@ -5,38 +5,6 @@
 % MATLAB VERSION: R2024a
 %--------------------------------------------------------------------------
 
-%% Bài 1
-x = linspace(0, 1);
-W_L = 4400./(1.425+x);
-
-plot(W_L, x)
-
-title('Đồ thị W_L') 
-xlabel('W_L')
-ylabel('x')
-grid on
-
-%% Bài 2
-
-n = input("nhap kich thuoc (nxn): ")
-if mod(n,2) == 0
-    n = n+1;
-end
-
-for i = 1:n
-    for j = 1:n
-        if(i == j || i + j == n+1 || i == (n+1)/2 || j == (n+1)/2 )
-            fprintf('o')
-        else
-            fprintf(' ')
-        end
-    end
-    fprintf('\n')
-end
-
-
-
-
 %% Bài 3
 
 while 1
