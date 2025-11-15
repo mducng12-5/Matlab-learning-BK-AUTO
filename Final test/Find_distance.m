@@ -2,6 +2,7 @@ function [distance1, distance2] = Find_distance(Matrix_GPS_Longtitude_1, Matrix_
     distance1 = 0;
     distance2 = 0;
     R = 6371; % Bán kính Trái Đất
+    
 
     for i = 1:(n-1)
         
